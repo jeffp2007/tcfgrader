@@ -10,7 +10,7 @@ class AssessmentsController < ApplicationController
 	end
 
 	def create
-		Assessment.create(assessment_params)
+		current_user.places.create(place_params)
 		redirect_to root_path
 	end
 
