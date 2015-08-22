@@ -1,1 +1,17 @@
 <h1>Hello World</h1>
+
+<% @assessments.each do |assessment| %>
+  <div>
+    <p><strong>Question 1:</strong> <%= assessment.question1 %></p>
+    <p><strong>Question 2:</strong> <%= assessment.question2 %></p>
+	<p><strong>Question 3:</strong> <%= assessment.question3 %></p>
+    <p><strong>Question 4:</strong> <%= assessment.question4 %></p>
+    <p><strong>Question 5:</strong> <%= assessment.question5 %></p>
+    <p><strong>Question 6:</strong> <%= assessment.question6 %></p>
+    <p><strong>Question 7:</strong> <%= assessment.question7 %></p>
+    <p><strong>Question 8:</strong> <%= assessment.question8 %></p>
+    <p><strong>Question 9:</strong> <%= assessment.question9 %></p>
+    <p><strong>Question 10:</strong> <%= assessment.question10 %></p>
+  </div>
+  <hr />
+<% end %>
