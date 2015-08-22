@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Tcfgrader</title>
+  <title>Total Customer Focus Grader</title>
   <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
   <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
   <%= csrf_meta_tags %>
@@ -19,7 +19,7 @@
 	        <span class="icon-bar"></span>
 	        <span class="icon-bar"></span>
 	      </button>
-	        <a class="navbar-brand" href="#">TCF Grader</a>
+	        <%= link_to 'Total Customer Focus', root_path, :class => 'navbar-brand' %>
 	    </div>
 
 	    <!-- Collect the nav links, forms, and other content for toggling -->
@@ -33,7 +33,8 @@
 			<% end %>
 	      </ul>
 	      <ul class="nav navbar-nav navbar-right">
-	        <li><a href="#">About</a></li>
+	        <li><%= link_to 'Take Assessment', new_assessment_path %></li>
+	        <i class="glyphicon glyphicon-plus-sign"></i>
 	      </ul>
 	    </div><!-- /.navbar-collapse -->
 	  </div><!-- /.container-fluid -->
