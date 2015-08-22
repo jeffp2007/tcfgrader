@@ -1,0 +1,16 @@
+<h1>Total Customer Focus Assessment</h1>
+
+  <%= simple_form_for @assessment do |f| %>
+    <%= f.input :question1 %>
+    <%= f.input :question2 %>
+    <%= f.input :question3 %>
+    <%= f.input :question4 %>
+    <%= f.input :question5 %>
+    <%= f.input :question6 %>
+    <%= f.input :question7 %>
+    <%= f.input :question8 %>
+    <%= f.input :question9 %>
+    <%= f.input :question10 %>
+    <br />
+    <%= f.submit 'Create', :class => 'btn btn-primary' %>
+  <% end %>
