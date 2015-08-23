@@ -10,10 +10,14 @@ class AssessmentsController < ApplicationController
 	end
 
 	def create
-		current_user.assessments.create(assessment_params)
-		@assessment = Assessment.last
-		@assessment.update_attributes(:grade => @assessment.question1 + @assessment.question2 + @assessment.question3 + @assessment.question4 + @assessment.question5 + @assessment.question6 + @assessment.question7 + @assessment.question8 + @assessment.question9 + @assessment.question10)
-		redirect_to assessment_path(@assessment)
+		@assessment = current_user.assessments.create(assessment_params)
+		if @assessment.valid?
+			@assessment.update_attributes(:grade => @assessment.question1 + @assessment.question2 + @assessment.question3 + @assessment.question4 + @assessment.question5 + @assessment.question6 + @assessment.question7 + @assessment.question8 + @assessment.question9 + @assessment.question10)
+			redirect_to assessment_path(@assessment)
+		else
+			redirect_to new_assessment_path
+			flash[:danger] = 'There was a problem processing your assessment. All fields must be completed.'
+		end
 	end
 
 	def show
