@@ -1,5 +1,5 @@
 Tcfgrader::Application.routes.draw do
-  devise_for :users
+  devise_for :users, controllers: { registrations: "registrations" }
   root 'assessments#index'
   resources :assessments
   resources :users, :only => :show

@@ -13,7 +13,7 @@ module AssessmentsHelper
 		if score < 4
 			return "You fail. This is the long version"
 		elsif score < 7
-			return "You are satisfying customers. This is the long version"
+			return '<strong>You are satisfying customers.</strong><br/>Your next step is to become Total Customer Focused. This is the long version'.html_safe
 		else
 			return "You are Total Customer Focused. This is the long version"
 		end
