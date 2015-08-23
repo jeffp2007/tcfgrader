@@ -2,6 +2,7 @@
 
 <% @assessments.each do |assessment| %>
   <div>
+    <p><strong>GRADE:</strong> <%= assessment.grade %></p>
     <p><strong>Question 1:</strong> <%= assessment.question1 %></p>
     <p><strong>Question 2:</strong> <%= assessment.question2 %></p>
 	<p><strong>Question 3:</strong> <%= assessment.question3 %></p>

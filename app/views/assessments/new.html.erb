@@ -1,16 +1,16 @@
 <h1>Total Customer Focus Assessment</h1>
 
   <%= simple_form_for @assessment do |f| %>
-    <%= f.input :question1 %>
-    <%= f.input :question2 %>
-    <%= f.input :question3 %>
-    <%= f.input :question4 %>
-    <%= f.input :question5 %>
-    <%= f.input :question6 %>
-    <%= f.input :question7 %>
-    <%= f.input :question8 %>
-    <%= f.input :question9 %>
-    <%= f.input :question10 %>
+    <%= f.input :question1, collection: ['1','2','3','4','5','6','7','8','9','10'] %>
+    <%= f.input :question2, collection: ['1','2','3','4','5','6','7','8','9','10'] %>
+    <%= f.input :question3, collection: ['1','2','3','4','5','6','7','8','9','10'] %>
+    <%= f.input :question4, collection: ['1','2','3','4','5','6','7','8','9','10'] %>
+    <%= f.input :question5, collection: ['1','2','3','4','5','6','7','8','9','10'] %>
+    <%= f.input :question6, collection: ['1','2','3','4','5','6','7','8','9','10'] %>
+    <%= f.input :question7, collection: ['1','2','3','4','5','6','7','8','9','10'] %>
+    <%= f.input :question8, collection: ['1','2','3','4','5','6','7','8','9','10'] %>
+    <%= f.input :question9, collection: ['1','2','3','4','5','6','7','8','9','10']%>
+    <%= f.input :question10, collection: ['1','2','3','4','5','6','7','8','9','10'] %>
     <br />
     <%= f.submit 'Create', :class => 'btn btn-primary' %>
   <% end %>
