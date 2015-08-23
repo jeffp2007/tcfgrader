@@ -1,16 +1,63 @@
-<h1>Total Customer Focus Assessment</h1>
-
+<div class="booyah-box">	
+  <h1>Total Customer Focus Assessment</h1>
+  <br />
+  <p>Here are some directions</p>
+  <br /><br />
+  <h3>Touch Points</h3>
+  <br />
   <%= simple_form_for @assessment do |f| %>
-    <%= f.input :question1, collection: ['0','1','2','3','4','5','6','7','8','9','10'] %>
-    <%= f.input :question2, collection: ['0','1','2','3','4','5','6','7','8','9','10'] %>
-    <%= f.input :question3, collection: ['0','1','2','3','4','5','6','7','8','9','10'] %>
-    <%= f.input :question4, collection: ['0','1','2','3','4','5','6','7','8','9','10'] %>
-    <%= f.input :question5, collection: ['0','1','2','3','4','5','6','7','8','9','10'] %>
-    <%= f.input :question6, collection: ['0','1','2','3','4','5','6','7','8','9','10'] %>
-    <%= f.input :question7, collection: ['0','1','2','3','4','5','6','7','8','9','10'] %>
-    <%= f.input :question8, collection: ['0','1','2','3','4','5','6','7','8','9','10'] %>
-    <%= f.input :question9, collection: ['0','1','2','3','4','5','6','7','8','9','10']%>
-    <%= f.input :question10, collection: ['0','1','2','3','4','5','6','7','8','9','10'] %>
-    <br />
-    <%= f.submit 'Create', :class => 'btn btn-primary' %>
+    <%= f.input :question1, label: '1. Responding to Requests', prompt: 'Select Grade', collection: 0..10 %>
+    <strong>(0 - 3):</strong> Fail to respond quickly and completely to all customer requests.<br />
+    <strong>(4 - 7):</strong> Respond quickly and completely to all customer requests.<br />
+    <strong>(8 - 10):</strong> Proactively anticipate the customer's needs and problems before being asked.<br/>
+    <hr />
+    <%= f.input :question2, label: '2. Solving Problems and Troubleshooting', prompt: 'Select Grade', collection: 0..10 %>
+    <strong>(0 - 3):</strong> Fail to resolve technical problems and prevent problems from recurring.<br />
+    <strong>(4 - 7):</strong> Resolve technical problems and prevent problems from recurring.<br />
+    <strong>(8 - 10):</strong> Resolve technical problems and address related non-technical problems that may prevent the customer from achieving their goals.<br/>
+    <hr />
+    <%= f.input :question3, label: '3. Routine Service and Maintenance', prompt: 'Select Grade', collection: 0..10 %>
+    <strong>(0 - 3):</strong> Fail to provide helpful, prompt service, and try to meet the customer's requestas much as possible.<br />
+    <strong>(4 - 7):</strong> Provide helpful, prompt service, and try to meet the customer's request as much as possible.<br />
+    <strong>(8 - 10):</strong> Understand the customer's situation and provide service that meets their needs and balances the interests of your own company.<br/>
+    <hr />
+    <%= f.input :question4, label: '4. New Installations', prompt: 'Select Grade', collection: 0..10 %>
+    <strong>(0 - 3):</strong> Fail to complete the installation on time, on budget, and ready to operate.<br />
+    <strong>(4 - 7):</strong> Complete the installation on time, on budget, and ready to operate.<br />
+    <strong>(8 - 10):</strong> Enable the customer to reach their targeted outcomes for the new installation.<br/>
+    <hr />
+    <%= f.input :question5, label: '5. Sales', prompt: 'Select Grade', collection: 0..10 %>
+    <strong>(0 - 3):</strong> Fail to present offers that clearly and completely address the customer's stated needs and requirements.<br />
+    <strong>(4 - 7):</strong> Present offers that clearly and completely address the customer's stated needs and requirements.<br />
+    <strong>(8 - 10):</strong> Working with the customer to find solutions that best address the customer's problem or opportunity.<br/>
+    <br /><br /><br /><br />
+ 	<h3>Relationship Opportunities</h3>
+  	<br />
+    <%= f.input :question6, label: '6. Strengthening and Expanding Relationships', prompt: 'Select Grade', collection: 0..10 %>
+    <strong>(0 - 3):</strong> Fail to build strong relationships with the customer's service and support people.<br />
+    <strong>(4 - 7):</strong> Build strong relationships with the customer's service and support people.<br />
+    <strong>(8 - 10):</strong> Create Total Customer Focused relationships throughout the customer as well as within your own organization.<br/>
+    <hr />
+    <%= f.input :question7, label: '7. Understanding Customer Needs', prompt: 'Select Grade', collection: 0..10 %>
+	<strong>(0 - 3):</strong> Fail to understand customer needs and don't ask customers to clarify them.<br />
+    <strong>(4 - 7):</strong> Expecting that customers will tell you their needs and that you will understand them.<br />
+    <strong>(8 - 10):</strong> Communicating with customers to bring out all their needs, including hidden ones, and making sure you understand them.<br/>
+    <hr />
+    <%= f.input :question8, label: '8. Leveraging Knowledge', prompt: 'Select Grade', collection: 0..10 %>
+	<strong>(0 - 3):</strong> Fail to use the most complete, accurate and up-to-date knowledge of your products in serving the customer.<br />
+    <strong>(4 - 7):</strong> Use the most complete, accurate and up-to-date knowledge of your products in serving the customer.<br />
+    <strong>(8 - 10):</strong> Use your knowledge of your products and the customer's situation to proactively help them achieve their goals.<br/>
+    <hr />
+    <%= f.input :question9, label: '9. Addressing Outcomes', prompt: 'Select Grade', collection: 0..10 %>
+	<strong>(0 - 3):</strong> Fail to deliver on the agreed outcomes for your products and services.<br />
+    <strong>(4 - 7):</strong> Deliver on the outcomes for your products and services, according to agreed contract terms.<br />
+    <strong>(8 - 10):</strong> Focus on working to enable the customer to achieve their business outcomes.<br/>
+    <hr />
+    <%= f.input :question10, label: '10. Fulfilling Standards', prompt: 'Select Grade', collection: 0..10 %>
+	<strong>(0 - 3):</strong> Fail to meet the standards agreed in the customer contract.<br />
+    <strong>(4 - 7):</strong> Ensure that work conforms to the standards agreed in the customer contract.<br />
+    <strong>(8 - 10):</strong> Ensure standards agreed in the customer contract create balanced outcomes for both customer and supplier.<br/>
+    <br /><br /><br />
+    <%= f.submit 'Grade Me', :class => 'btn btn-primary' %>
   <% end %>
+ </div>
