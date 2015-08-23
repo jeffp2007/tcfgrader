@@ -19,7 +19,7 @@
 	        <span class="icon-bar"></span>
 	        <span class="icon-bar"></span>
 	      </button>
-	        <%= link_to 'Total Customer Focus', root_path, :class => 'navbar-brand' %>
+	        <strong><%= link_to 'Total Customer Focus', root_path, :class => 'navbar-brand' %></strong>
 	    </div>
 
 	    <!-- Collect the nav links, forms, and other content for toggling -->
@@ -34,8 +34,11 @@
 			<% end %>
 	      </ul>
 	      <ul class="nav navbar-nav">
-	        <li><%= link_to 'Take Assessment', new_assessment_path %></li>
+	        <li><%= link_to new_assessment_path do %>
 	        <i class="glyphicon glyphicon-plus-sign"></i>
+	        Take Assessment
+	        <% end %>
+	    	</li>
 	      </ul>
 	    </div><!-- /.navbar-collapse -->
 	  </div><!-- /.container-fluid -->

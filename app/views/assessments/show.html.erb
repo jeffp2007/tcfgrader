@@ -1,0 +1,112 @@
+<h1>Assessment Results</h1>
+<h2><small><%= @assessment.created_at.strftime("%B %d, %Y") %></small></h2>
+<br />
+<div class="booyah-box">
+<h2>Overall: <strong><%= @assessment.grade %> <small>/ 100</small></strong></h2>
+<br />
+<p>Your score is blah blah blah. Your overall result is this and it means this. For a more detailed look at each of your customer touchpoints, view the sections below. Your score is blah blah blah. Your overall result is this and it means this. For a more detailed look at each of your customer touchpoints, view the sections below.</p>
+<p>Your score is blah blah blah. Your overall result is this and it means this. For a more detailed look at each of your customer touchpoints, view the sections below. Your score is blah blah blah. Your overall result is this and it means this. For a more detailed look at each of your customer touchpoints, view the sections below.</p>
+<hr /><br />
+
+<h3>Touch Points</h3>
+<br /><br />
+
+<h4>1. Responding to Requests: <strong><%= @assessment.question1 %> <small>/ 10</small></strong></h4>
+<br />
+<p><%= q1_brief(@assessment.question1) %></p>
+<a href="#q1" data-toggle="collapse">Learn More</a>
+<div id="q1" class="collapse long-output">
+    <%= q1_long(@assessment.question2) %>
+</div>
+<hr />
+
+<h4>2. Solving Problems and Troubleshooting: <strong><%= @assessment.question2 %> <small>/ 10</small></strong></h4>
+<br />
+<p><%= q2_brief(@assessment.question2) %></p>
+<a href="#q2" data-toggle="collapse">Learn More</a>
+<div id="q2" class="collapse long-output">
+    <%= q2_long(@assessment.question2) %>
+</div>
+</p>
+<hr />
+
+<h4>3. Routine Service and Maintenance: <strong><%= @assessment.question3 %> <small>/ 10</small></strong></h4>
+<br />
+<p><%= q3_brief(@assessment.question3) %></p>
+<a href="#q3" data-toggle="collapse">Learn More</a>
+<div id="q3" class="collapse long-output">
+    <%= q3_long(@assessment.question3) %>
+</div>
+</p>
+<hr />
+
+<h4>4. New Installations: <strong><%= @assessment.question4 %> <small>/ 10</small></strong></h4>
+<br />
+<p><%= q4_brief(@assessment.question4) %></p>
+<a href="#q4" data-toggle="collapse">Learn More</a>
+<div id="q4" class="collapse long-output">
+    <%= q4_long(@assessment.question4) %>
+</div>
+</p>
+<hr />
+
+<h4>5. Sales: <strong><%= @assessment.question5 %> <small>/ 10</small></strong></h4>
+<br />
+<p><%= q5_brief(@assessment.question5) %></p>
+<a href="#q5" data-toggle="collapse">Learn More</a>
+<div id="q5" class="collapse long-output">
+    <%= q5_long(@assessment.question5) %>
+</div>
+</p>
+<hr />
+<br />
+
+<h3>Relationship Opportunities</h3>
+<br /><br />
+
+<h4>6. Strengthening and Expanding Relationships: <strong><%= @assessment.question6 %> <small>/ 10</small></strong></h4>
+<br />
+<p><%= q6_brief(@assessment.question6) %></p>
+<a href="#q6" data-toggle="collapse">Learn More</a>
+<div id="q6" class="collapse long-output">
+    <%= q6_long(@assessment.question6) %>
+</div>
+<hr />
+
+<h4>7. Understanding Customer Needs: <strong><%= @assessment.question7 %> <small>/ 10</small></strong></h4>
+<br />
+<p><%= q7_brief(@assessment.question7) %></p>
+<a href="#q7" data-toggle="collapse">Learn More</a>
+<div id="q7" class="collapse long-output">
+    <%= q7_long(@assessment.question7) %>
+</div>
+<hr />
+
+<h4>8. Leveraging Knowledge: <strong><%= @assessment.question8 %> <small>/ 10</small></strong></h4>
+<br />
+<p><%= q8_brief(@assessment.question8) %></p>
+<a href="#q8" data-toggle="collapse">Learn More</a>
+<div id="q8" class="collapse long-output">
+    <%= q8_long(@assessment.question8) %>
+</div>
+<hr />
+
+<h4>9. Addressing Outcomes: <strong><%= @assessment.question9 %> <small>/ 10</small></strong></h4>
+<br />
+<p><%= q9_brief(@assessment.question9) %></p>
+<a href="#q9" data-toggle="collapse">Learn More</a>
+<div id="q9" class="collapse long-output">
+    <%= q9_long(@assessment.question9) %>
+</div>
+<hr />
+
+<h4>10. Fulfilling Standards: <strong><%= @assessment.question10 %> <small>/ 10</small></strong></h4>
+<br />
+<p><%= q10_brief(@assessment.question10) %></p>
+<a href="#q10" data-toggle="collapse">Read More</a>
+<div id="q10" class="collapse long-output">
+    <%= q10_long(@assessment.question10) %>
+</div>
+<br />
+
+</div>

@@ -13,7 +13,11 @@ class AssessmentsController < ApplicationController
 		current_user.assessments.create(assessment_params)
 		@assessment = Assessment.last
 		@assessment.update_attributes(:grade => @assessment.question1 + @assessment.question2 + @assessment.question3 + @assessment.question4 + @assessment.question5 + @assessment.question6 + @assessment.question7 + @assessment.question8 + @assessment.question9 + @assessment.question10)
-		redirect_to root_path
+		redirect_to assessment_path(@assessment)
+	end
+
+	def show
+		@assessment = Assessment.find(params[:id])
 	end
 
 	private

@@ -1,3 +1,19 @@
-<h1>User Profile</h1>
-<h2><%= @user.email %></h2>
-<h3>Member Since: <%= @user.created_at.strftime("%B %d, %Y") %></h3>
+<h1>My Profile</h1>
+<br />
+<p><%= @user.email %>
+	<br />
+Member Since: <%= @user.created_at.strftime("%B %d, %Y") %></p>
+<br />
+<div class="booyah-box">
+	<% i = @user.assessments.count %>
+	<h3>Previous Assessments</h3>
+	<br /><br />
+	<% @user.assessments.reverse_each do |assessment| %>
+	    <h4><%= link_to "Assessment #{i}", assessment_path(assessment) %></h4>
+	    <p><%= assessment.created_at.strftime("%B %d, %Y") %>
+	    <br />
+	    <strong>Grade:</strong> <%= assessment.grade %></p>
+	    <% i = i - 1 %>
+	  	<hr />
+	<% end %>
+</div>

@@ -1,3 +1,5 @@
+@import url(http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300);
+
 header {
   border-top: 9px solid #222222;
   margin-bottom: -10px;
@@ -10,8 +12,8 @@ header {
 }
 
 .app-body {
-	padding-left: 5%;
-	padding-right: 5%;
+	padding-left: 10%;
+	padding-right: 10%;
 }
 
 .booyah-box {
@@ -29,4 +31,18 @@ header {
 h1, h2, h3, h4, h5, h6 {
   margin:0;
   padding:0;
+}
+
+.navbar.navbar-header {
+	color: black;
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+}
+
+.long-output {
+	background-color: whitesmoke;
+	margin-top: 10px;
+	padding:20px;
 }
