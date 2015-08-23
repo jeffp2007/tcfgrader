@@ -16,7 +16,7 @@ class AssessmentsController < ApplicationController
 			redirect_to assessment_path(@assessment)
 		else
 			redirect_to new_assessment_path
-			flash[:danger] = 'There was a problem processing your assessment. All fields must be completed.'
+			flash[:alert] = 'There was a problem processing your assessment. All fields must be completed.'
 		end
 	end
 
