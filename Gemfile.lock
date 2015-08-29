@@ -48,6 +48,9 @@ GEM
       responders
       thread_safe (~> 0.1)
       warden (~> 1.2.3)
+    devise_invitable (1.5.2)
+      actionmailer (>= 3.2.6, < 5)
+      devise (>= 3.2.0)
     erubis (2.7.0)
     execjs (2.6.0)
     hike (1.2.3)
@@ -132,6 +135,7 @@ DEPENDENCIES
   bootstrap-sass (~> 3.3.4)
   coffee-rails (~> 4.0.0)
   devise (>= 3.2.4)
+  devise_invitable (~> 1.5.2)
   jbuilder (~> 1.2)
   jquery-rails
   pg

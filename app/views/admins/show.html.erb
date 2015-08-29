@@ -9,3 +9,20 @@ Member Since: <%= @admin.created_at.strftime("%B %d, %Y") %></p>
 	<h3>Previous Assessments</h3>
 	<br /><br />
 </div>
+<div class="booyah-box">
+	<h3>Invite a colleague</h3>
+	<br /><br />
+	<%= simple_form_for(User.new, url: user_invitation_path) do |f| %>
+	  <%= f.error_notification %>
+
+	  <div class="form-inputs">
+
+	    <%= f.input :email, required: true, label: false %>
+	  </div>
+	  <br />
+
+	  <div class="form-actions">
+	    <%= f.button :submit, "Invite User", :class => 'btn btn-primary'  %>
+	  </div>
+	<% end %>
+</div>
