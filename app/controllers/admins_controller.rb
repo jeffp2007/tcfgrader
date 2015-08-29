@@ -7,4 +7,8 @@ class AdminsController < ApplicationController
 		@admin = Admin.find(params[:id])
 	end
 
+	def invite
+		User.invite!(params[:email])
+	end
+
 end

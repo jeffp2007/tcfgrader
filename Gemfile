@@ -36,6 +36,7 @@ gem 'bootstrap-sass', '~> 3.3.4'
 gem 'devise', '>= 3.2.4'
 gem 'simple_form'
 gem 'devise_invitable', '~> 1.5.2'
+gem "figaro", ">= 1.0.0"
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.1.2'

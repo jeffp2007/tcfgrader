@@ -12,7 +12,7 @@ Member Since: <%= @admin.created_at.strftime("%B %d, %Y") %></p>
 <div class="booyah-box">
 	<h3>Invite a colleague</h3>
 	<br /><br />
-	<%= simple_form_for(User.new, url: user_invitation_path) do |f| %>
+	<%= simple_form_for(User.new) do |f| %>
 	  <%= f.error_notification %>
 
 	  <div class="form-inputs">
