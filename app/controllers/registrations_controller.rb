@@ -5,3 +5,4 @@ class RegistrationsController < Devise::RegistrationsController
     	new_assessment_path
   	end
 end
+

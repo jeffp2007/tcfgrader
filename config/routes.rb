@@ -1,8 +1,10 @@
 Tcfgrader::Application.routes.draw do
+  devise_for :admins, controllers: { adminregistrations: "adminregistrations" }
   devise_for :users, controllers: { registrations: "registrations" }
   root 'assessments#index'
   resources :assessments
   resources :users, :only => :show
+  resources :admins, :only => :show
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
