@@ -6,4 +6,5 @@ class User < ActiveRecord::Base
 
   has_many :assessments
   belongs_to :organization
+
 end
